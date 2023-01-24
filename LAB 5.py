@@ -6,9 +6,6 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import MinMaxScaler
 
 df = pd.read_csv('Social_Network_Ads.csv')
-print(df.head())
-
-plt.scatter(df['Age'], df['EstimatedSalary'])
 
 df_0 = df[df['Purchased'] == 0]
 df_1 = df[df['Purchased'] == 1]
@@ -36,3 +33,12 @@ model.predict(q1)
 model.score(X_scaled, df['Purchased'])
 
 plt.show()
+
+
+# OUTPUT
+#  User ID  Gender  Age  EstimatedSalary  Purchased
+# 0  15624510    Male   19            19000          0
+# 1  15810944    Male   35            20000          0
+# 2  15668575  Female   26            43000          0
+# 3  15603246  Female   27            57000          0
+# 4  15804002    Male   19            76000          0
